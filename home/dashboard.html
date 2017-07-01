@@ -205,23 +205,16 @@
 <div class="col-md-9" style="margin-top:23%;">
                         
                             
+      
                                 
-                                
-                                <div class="imageslide" ng-switch='slideshow' ng-animate='animate'>
-			<div class="slider-content" ng-switch-when="1">
-				<img ng-src="app-content/img/slidder/sl1.jpg" width="870" height="430">
-                
-			</div>	
-			<div class="slider-content" ng-switch-when="2">
-				<img ng-src="app-content/img/slidder/sl2.jpg" width="870" height="430">
-
-			</div>
-			<div class="slider-content" ng-switch-when="3">
-				<img ng-src="app-content/img/slidder/sl3.jpg" width="870" height="430">
-
-			</div>	
-				
-                                    </div>
+                            <carousel interval="slidesTimeIntervalInMs">
+        <slide ng-repeat="slide in bannerimg" active="slide.active">
+          <img ng-src="{{slide.banner_image}}">
+          <div class="carousel-caption">
+            <h4>Slide {{$index+1}}</h4>
+          </div>
+        </slide>
+      </carousel>
     <uib-tabset active="active">
   
         

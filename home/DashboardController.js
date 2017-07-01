@@ -16,9 +16,11 @@
     { title:'New Arrivals', content:'Dynamic content 2' }
   ];
         
+       
   // carousel slidder controller starts      
 var slidesInSlideshow = 3;
- var slidesTimeIntervalInMs = 3000; 
+ var slidesTimeIntervalInMs = 1000; 
+       
   
   $scope.slideshow = 1;
   var slideTimer =
@@ -112,10 +114,36 @@ $scope.getnewarrival = function (){
     
             
         }
+// banner image controller
+
+$scope.getbanner = function (){
+            
+           
+    $http.get('http://localhost/newdash1/app-services/php/get_banner.php')
+       .success(function(data) {
+        
+        $scope.bannerimg = data;
+       
+       console.log("Succesfully get");
+        
+
+                           })
+                           .error(function(data, status, headers, config) {
+                               // log error
+                            
+                              console.log("Error");
+                           });
+    
+    
+            
+        }
+
 
 $scope.getFeatured();
 $scope.getnewarrival();
 $scope.getPopular();
+        
+$scope.getbanner();
 
         
    
