@@ -1,25 +1,5 @@
- <style>
-    div.navbar-collapse.collapse {
-    	display: block;
-    	overflow: hidden;
-    	max-height: 0px;
-    	-webkit-transition: max-height .3s ease;
-    	-moz-transition: max-height .3s ease;
-    	-o-transition: max-height .3s ease;
-    	transition: max-height .3s ease;
-    }
-    div.navbar-collapse.collapse.in {
-    	max-height: 2000px;
-    }
-    </style>
-
-<div id="content-block">  
-    
-
-        <div class="content-center fixed-header-margin">
-            <!-- HEADER -->
-            <div id="scrollup">
-            <div class="header-wrapper style-2">
+<div class="content-center fixed-header-margin">
+             <div class="header-wrapper style-2">
                 <header class="type-1">
                    <div class="header-top">
                         <div class="header-top-entry">
@@ -69,7 +49,7 @@
 
                         <div class="right-entries">
                             <a class="header-functionality-entry open-search-popup" href="#"><i class="fa fa-search"></i><span>Search</span></a>
-                            <a class="header-functionality-entry open-cart-popup" href="" ng-click="goCart()"><i class="fa fa-shopping-cart"></i><span>My Cart  {{items.length}}</span></a>                            
+                            <a class="header-functionality-entry open-cart-popup" href="" ng-click="myCart()"><i class="fa fa-shopping-cart"></i><span>My Cart  {{items.length}}</span></a>                            
                             <a class="header-functionality-entry" href="#"><i class="fa fa-heart-o"></i><span>Wishlist</span></a> 
                                                      
                         </div>                       
@@ -83,9 +63,9 @@
                             <div class="close-menu"></div>
                         </div>
                         <div class="nav-overflow">
-                            <div class="sidebar-navigation-title">About us</div>
+                            <div class="sidebar-navigation-title">Cart Item Details</div>
                             <div class="navigation-search-content">
-                                
+                               
                                 
                                    
                                
@@ -98,7 +78,7 @@
                                         </div>
                                
                                        
-                                        <div class="search-field ">
+                                      <div class="search-field ">
                                          
                                             <input class="search-field" type="text" placeholder="                            Search Products and Brands" ng-model="hello" ng-keyup='fetchProducts()'/><span></span><br>
      <ul class="list-group">
@@ -176,89 +156,76 @@
                 </header>
                 <div class="clear"></div>
             </div>
-    </div>
-
-            <div class="content-push" style="margin-top:-1%; margin-left: 1.2%;">
-
-                <div class="row">
-                  <div class="col-md-12"  style="margin-top:25%;">
-                           <div class="breadcrumb-box">
-                    <a href="#">Home</a>
-                    <a href="   ">About Us</a>
-                </div>
-                      <div class="information-blocks">
-                            <div class="col-md-6">
-                                <img class="project-thumbnail" src="app-content/img/about-2.jpg" alt="" />
-                            </div>
-                        </div>
-                       <div class="col-md-6 information-entry">
-                            <div class="article-container style-1">
-                                <h2>Which of us ever undertakes laborious physical exercise, except to obtain.</h2>
-                                <p style="font-size:16px; text-align: justify;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisc elit. Duis aute irure dolor 
-                                    in reprehenderit in voluptate velit esse cillum dolore
-                                </p>
-                                <p style="text-align: justify;">
-                                    <b>
-                                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through.
-                                    </b>
-                                </p>
-                                <p style="text-align: justify;">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. </p>
-                                <p style="text-align: justify;">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. </p>
-                                <a class="continue-link" href="#">Continue reading <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-
-                        
-                    </div>
+            <div class="content-push" style="margin-top:25%; margin-left: 3%;" >
+                <div class="breadcrumb-box">
+                    <a ui-sref="home">Home</a>
+                    <a href="">products</a>
+                    <a href="">Cart</a>
                     
-                    
+                                         
                 </div>
                 
-                <div class="information-blocks">
-                    <div class="column-article-wrapper">
-                        <div class="row nopadding">
-                            <div class="col-sm-4 information-entry left-border nopadding">
-                                <div class="column-article-entry">
-                                    <a class="title" href="#">About Store</a>
-                                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                                    <a class="read-more">Read more <i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 information-entry left-border nopadding">
-                                <div class="column-article-entry">
-                                    <a class="title" href="#">Company Blog</a>
-                                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                                    <a class="read-more">Read more <i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 information-entry left-border nopadding">
-                                <div class="column-article-entry">
-                                    <a class="title" href="#">Coming Events</a>
-                                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                                    <a class="read-more">Read more <i class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            <div class="clearfix"></div>
-    </div>
-    
+                <div class="table-responsive col-lg-12" style="margin-left: 3%;">
 
-            
-                
-                    
-                
+    <table class="table table-striped ngCart cart" width="100%">
 
+        <thead>
+        <tr style="font-weight: bold;">
+            <th></th>
+            <th></th>            
+            <th>ITEMS</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>quantity</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr ng-repeat='item in getData' width="10%">
+            <td></td>
+            <td></td>
+            <td><img src="admin/{{item.product_img}}" width="80" height="75"/></td>            
+            <td>{{item.product_name}}</td>
+            <td>{{item.product_price}}</td>
+            <td>
+  <button ng-click="decrement($index)" class='entry number-minus' ng-disabled="qty<=0">-</button>
+            {{item.product_qty}}
+  <button ng-click="increment($index)" class='entry number-plus'>+</button>
+             
+            </td>
+            <td>&#2352; {{item.product_price * item.product_qty}}</td>
+        </tr>
+         <tr  width="10%">
+            <td></td>
+            <td></td>
+            <td></td>          
+            <td></td>
+            <td></td>
+             <hr>
+            <td>
+                <h2>Total :</h2>
+            </td>
+            <td><h2>&#2352; {{total}}</h2></td>
+        </tr>
          
-    
+        </tfoot>
+        <tbody>
+       
+        </tbody>
+       
+      
+        
+    </table>
+   
+</div>
+                
+            </div>
+             <button class="button style-10" type="button" ng-click="viewprofile(getData, 'lg' )" style="margin-left: 75%;">CHECKOUT</button>
             
-                <!-- FOOTER -->
-                <div class="footer-wrapper style-2" style="
-    background-color: #189a8e;     margin-top: 8%;">
+     </div>
+ 
+        <div class="footer-wrapper style-2" style="
+    background-color: #189a8e;">
                     <footer class="type-1">
                        
                         <div class="footer-bottom-navigation">
@@ -278,14 +245,138 @@
                        
                     </footer>
                 </div>
-            
+
+ 
+  <script type="text/ng-template" id="popupModal.html">
+            <div class="modal-header">
+                <center> <h3>Place Order</h3> </center>
+            </div>
+      
+<form class="form-horizontal">
+
+  <ul class="nav nav-tabs">
+    <li ng-repeat="step in steps" ng-class="{active: $index==getCurrentStepIndex()}">
+      <a href="javascript:void(0)" ng-click="goToStep($index)">{{step}}</a>
+    </li>
+  </ul>
+  <div ng-switch on="selection">
+
+    <!-- First Step -->
+    <div ng-switch-when="Step 1: Product Info">
+      <div class="row">
+        <div class="span4" style="margin-left: 5%;">
+         <table class="table table-striped ngCart cart" style="width: 865px;">
+
+        <thead>
+        <tr style="font-weight: bold;">
+            <th></th>
+            <th></th>            
+            <th>ITEMS</th>
+            <th>Product Name</th>
+            <th>quantity</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr ng-repeat='item in itemsData' width="100%" >
+            <td></td>
+            <td></td>
+            <td><img src="admin/{{item.product_img}}" width="80" height="75"/></td>            
+            <td>{{item.product_name}}</td>
+            <td>{{item.product_qty}}</td>
+            <td>&#2352;{{item.product_qty * item.product_price}}</td>
+        </tr>
+             <tr  width="100%">
+         
+            <td></td>
+            <td></td>          
+            <td></td>
+            <td></td>
+             <hr>
+            <td>
+                <h2>Total :</h2>
+            </td>
+            <td><h2>&#2352; {{itemsData.total}}</h2></td>
+        </tr>
+        </tfoot>
+    </table>
+   
+        </div>
+        <div class="span4 offset1">
 
         
-        <div class="clear"></div>
-            </div>
-    
+        </div>
+      </div>
+    </div>
 
+    <!-- Second Step -->
+    <div ng-switch-when="Step 2: Delivery Address">
+       <br>
+                  <form  class="form-horizontal">
+                       <div class="form-group">
+                           <label class="col-sm-2 control-label">Name</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-3">
+                              <input type="text"  placeholder="Name" name="title" ng-model="delivery.name" class="form-control" >
+                           </div>
+                            <label class="col-sm-1 control-label">Email:</label>                          
+                            <div class="col-sm-3">
+                                 <input type="text"  placeholder="Email" name="email" ng-model="delivery.email" class="form-control" >
+                            
+                           </div>
+                        </div>
+                      
+                         
+                        <div class="form-group">
+                           <label class="col-sm-2 control-label">Location</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-7">
+                               <textarea placeholder="Address" name="location" ng-model="delivery.address" class="form-control" rows="5" ></textarea>
+                              </div>
+                        </div>   
+                
+                      
+                      <div class="form-group">
+                           <label class="col-sm-2 control-label">Mobile No</label>
+                            <label class="col-sm-1 control-label">:</label>
+                           <div class="col-sm-3">
+                              <input type="number" placeholder="Mobile Number" name="person" ng-model="delivery.mobile" class="form-control" >
+                           </div>
+                            <label class="col-sm-1 control-label">Pincode</label>                          
+                            <div class="col-sm-3">
+                             <input type="number" placeholder="Pincode" name="exp" ng-model="delivery.pincode" class="form-control" >
 
+                           </div>
+                        </div>
+                   
+<br>
+                  </form>
 
-   
+    </div>
+
+    <!-- Third Step -->
+    <div ng-switch-when="Step 3: Payment">
+       <center> <h1>Payment Method</h1>
+         <button class="btn btn-success" ng-click="OrdertoMail(itemsData)" >Send to Mail</button>
+      </center>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <ul class="pager pull-left">
+    <li class="" ng-class="{disabled: !hasPreviousStep()}">
+      <a href="javascript:void(0);" ng-click="decrementStep()">&larr; Previous Step</a>
+    </li>
+    <li class="" ng-class="{disabled: !hasNextStep()}">
+      <a href="javascript:void(0);" ng-click="incrementStep(delivery)">Next Step &rarr;</a>
+    </li>
+  </ul>
  
+  <div class="clearfix"></div>
+</form>
+     
+       
+            <div class="modal-footer">
+                <button class="btn btn-danger" ng-click="ok()">Cancel</button>
+              
+            </div>
+        </script>

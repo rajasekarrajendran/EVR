@@ -1,0 +1,288 @@
+ <style>
+    div.navbar-collapse.collapse {
+    	display: block;
+    	overflow: hidden;
+    	max-height: 0px;
+    	-webkit-transition: max-height .3s ease;
+    	-moz-transition: max-height .3s ease;
+    	-o-transition: max-height .3s ease;
+    	transition: max-height .3s ease;
+    }
+    div.navbar-collapse.collapse.in {
+    	max-height: 2000px;
+    }
+    </style>
+
+<div id="content-block">  
+    
+
+        <div class="content-center fixed-header-margin">
+            <!-- HEADER -->
+            <div id="scrollup">
+            <div class="header-wrapper style-2">
+                <header class="type-1">
+                   <div class="header-top">
+                        <div class="header-top-entry">
+                            <div class="title"><img src="app-content/img/flag-lang-1.png" alt="" />English<i class="fa fa-caret-down"></i></div>
+                            <div class="list">
+                                <a href="#" class="list-entry"><img src="app-content/img/flag-lang-2.png" alt="" />French</a>
+                                <a href="#" class="list-entry"><img src="app-content/img/flag-lang-3.png" alt="" />Spanish</a>
+                            </div>
+                        </div>
+                  
+                        <div class="header-top-entry hidden-xs">
+                            <div class="title">India's Fastest Online Shopping Destination</div>
+                            
+                        </div>
+                        <div class="socials-box">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                        <div class="menu-button responsive-menu-toggle-class"><i class="fa fa-reorder"></i></div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="header-middle">
+                        <div class="logo-wrapper">
+                            <a id="logo" href=""><img src="app-content/img/new/evr_logo.png" style="width: 85%; height: auto;" alt="" /></a>
+                            
+                        </div>
+                      
+
+                        <div class="middle-entry">
+                            <a class="icon-entry" href="#">
+                                <span class="image">
+                                    <i class="fa fa-phone"></i>
+                                </span>
+                                <span class="text">
+                                    <b>Contact Info</b> <br/> (+91) 180 000 425
+                                </span>
+                            </a>
+                            
+                        </div>
+                        
+
+                        <div class="right-entries">
+                            <a class="header-functionality-entry open-search-popup" href="#"><i class="fa fa-search"></i><span>Search</span></a>
+                            <a class="header-functionality-entry open-cart-popup" href="" ng-click="myCart()"><i class="fa fa-shopping-cart"></i><span>My Cart  {{items.length}}</span></a>                            
+                            <a class="header-functionality-entry" href="#"><i class="fa fa-heart-o"></i><span>Wishlist</span></a> 
+                                                     
+                        </div>                       
+
+                    </div>
+
+                    <div class="close-header-layer"></div>
+                   <div class="navigation" nav yc-navbar-affix>
+                         <div class="navigation-header responsive-menu-toggle-class">
+                            <div class="title">Navigation</div>
+                            <div class="close-menu"></div>
+                        </div>
+                        <div class="nav-overflow">
+                            <div class="sidebar-navigation-title">Contact us</div>
+                            <div class="navigation-search-content">
+                               
+                                
+                                   
+                               
+                                
+                                <div class="search-box size-1"> 
+                                    <form>
+                                        <div class="search-button">
+                                            <i class="fa fa-search"></i>
+                                            <input type="submit" />
+                                        </div>
+                               
+                                       
+                                        <div class="search-field ">
+                                         
+                                            <input class="search-field" type="text" placeholder="                            Search Products and Brands" ng-model="hello" ng-keyup='fetchProducts()'/><span></span><br>
+     <ul class="list-group">
+<a href="javascript:void(0)"><li class="list-group-item"  ng-click='Viewproduct(result.product_id)' ng-repeat="result in prdNameList">{{ result.product_name }}</li> </a>
+  </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                                         
+                            
+                            
+                            
+                                
+                                <ul ng-show="lions">
+                                    <li class="full-width">
+                                        <a href="index.html" ng-click="collapseMenu()" class="active">Home</a>
+                                       
+                                    </li>
+                                    <li class="full-width-columns">
+                                        <a href="#">About us</a>
+                                       </li>
+                                    <li class="simple-list">
+                                        <a href="#">Products</a><i class="fa fa-chevron-down"></i>
+                                        <div class="submenu">
+                                            <ul class="simple-menu-list-column">
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 1</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 2</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 3</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>                                 
+                                            
+                                    
+                                     <li class="simple-list">
+                                        <a href="#">Contact Us</a>
+                                        
+                                    </li>
+                                   
+
+                                    <li class="fixed-header-visible">
+                                        <a class="fixed-header-square-button open-cart-popup"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="fixed-header-square-button open-search-popup"><i class="fa fa-search"></i></a>
+                                    </li>
+                                </ul>
+                                    
+                      
+                               
+
+                                <div class="clear"></div>
+
+                                <a class="fixed-header-visible additional-header-logo"><img src="app-content/img/new/evr_logo.png" /></a>
+                            
+                            <div class="navigation-footer responsive-menu-toggle-class">
+                                <div class="socials-box">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="navigation-copyright">Copyrights@2017. All rights reserved</div>
+                            </div>
+                        
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </header>
+                <div class="clear"></div>
+            </div>
+    </div>
+
+            <div class="content-push" style="margin-top:25%; margin-left: 3%;">
+     <div class="breadcrumb-box">
+                    <a ui-sref="home">Home</a>
+                    <a href="">Contact us</a>                 
+                                         
+                </div>
+                <div class="row">
+                    <div class="col-md-12 information-entry">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.0862763185095!2d79.24383520674809!3d12.111485607304884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bacb0e0498c7995%3A0xbdf90b7f62ad307c!2sCar+St%2C+Vettavalam%2C+Tamil+Nadu+606754!5e0!3m2!1sen!2sin!4v1501062900798" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                
+                
+                </div>
+                <div class="row">
+                        <div class="col-md-8 information-entry">
+                            <h3 class="block-title main-heading">Drop Us A Line</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Name </label>
+                                        <input class="simple-field" type="text" ng-model="contact.name" placeholder="Enter Your name" required value="" />
+                                        
+                                        <label>Email </label>
+                                        <input class="simple-field" type="email" ng-model="contact.email" placeholder="Enter Your email address " required value="" />
+                                        <label>Mobile Number </label>
+                                        <input class="simple-field" type="number" ng-model="contact.mobile" placeholder="Enter Your Mobile number " required value="" />
+                                        
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label>Message </label>
+                                        <textarea class="simple-field" ng-model="contact.message" placeholder="Enter Your message content" required></textarea>
+                                        <div class="button style-10">Send Message<input type="submit" value="" ng-click="contactinfo()" /></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4 information-entry">
+                            <h3 class="block-title main-heading">Let's Stay In Touch</h3>
+                            <div class="article-container style-1">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                                <h5>Company address</h5>
+                                <p>165, Car Street<br/>
+                                Tiruvannamalai,  606601</p>
+                                <h5>Contact Informations</h5>
+                                <p>Email:  Support@evr.com<br/>
+                                Toll-free: (1800) 000 8808</p>
+                            </div>
+                            <div class="share-box detail-info-entry">
+                                <div class="title">Share in social media</div>
+                                <div class="socials-box">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+     
+    
+   
+     </div>
+            <div class="clearfix"></div>
+            
+                
+                    
+                
+
+                <!-- FOOTER -->
+                <div class="footer-wrapper style-2" style="
+    background-color: #189a8e;     margin-top: 8%;">
+                    <footer class="type-1">
+                       
+                        <div class="footer-bottom-navigation">
+                            <div class="cell-view">
+                                <div class="footer-links">
+                                    <a href="#">Site Map</a>
+                                    <a ui-sref="about">About</a>
+                                    <a href="#">Terms</a>
+                                    <a href="#">Advanced Search</a>
+                                    <a href="#">Orders and Returns</a>
+                                    <a ui-sref="contact">Contact Us</a>
+                                </div>
+                                <div class="copyright">Copyrights@2017. All right reserved</div>
+                            </div>
+                           
+                        </div>
+                       
+                    </footer>
+                </div>
+            
+
+        
+        <div class="clear"></div>
+            </div>
+
+    
+
+
+
+   
+ 

@@ -1,0 +1,479 @@
+ <style>
+    div.navbar-collapse.collapse {
+    	display: block;
+    	overflow: hidden;
+    	max-height: 0px;
+    	-webkit-transition: max-height .3s ease;
+    	-moz-transition: max-height .3s ease;
+    	-o-transition: max-height .3s ease;
+    	transition: max-height .3s ease;
+    }
+    div.navbar-collapse.collapse.in {
+    	max-height: 2000px;
+    }
+    </style>
+
+<div id="content-block">  
+    
+
+        <div class="content-center fixed-header-margin">
+            <!-- HEADER -->
+            <div id="scrollup">
+            <div class="header-wrapper style-2">
+                <header class="type-1">
+                   <div class="header-top">
+                        <div class="header-top-entry">
+                            <div class="title"><img src="app-content/img/flag-lang-1.png" alt="" />English<i class="fa fa-caret-down"></i></div>
+                            <div class="list">
+                                <a href="#" class="list-entry"><img src="app-content/img/flag-lang-2.png" alt="" />French</a>
+                                <a href="#" class="list-entry"><img src="app-content/img/flag-lang-3.png" alt="" />Spanish</a>
+                            </div>
+                        </div>
+                  
+                        <div class="header-top-entry hidden-xs">
+                            <div class="title">India's Fastest Online Shopping Destination</div>
+                            
+                        </div>
+                        <div class="socials-box">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                        <div class="menu-button responsive-menu-toggle-class"><i class="fa fa-reorder"></i></div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="header-middle">
+                        <div class="logo-wrapper">
+                            <a id="logo" href=""><img src="app-content/img/new/evr_logo.png" style="width: 85%; height: auto;" alt="" /></a>
+                            
+                        </div>
+                      
+
+                        <div class="middle-entry">
+                            <a class="icon-entry" href="#">
+                                <span class="image">
+                                    <i class="fa fa-phone"></i>
+                                </span>
+                                <span class="text">
+                                    <b>Contact Info</b> <br/> (+91) 180 000 425
+                                </span>
+                            </a>
+                            
+                        </div>
+                        
+
+                        <div class="right-entries">
+                            <a class="header-functionality-entry open-search-popup" href="#"><i class="fa fa-search"></i><span>Search</span></a>
+                            <a class="header-functionality-entry open-cart-popup" href="" ng-click="myCart()"><i class="fa fa-shopping-cart"></i><span>My Cart  {{items.length}}</span></a>                            
+                            <a class="header-functionality-entry" href="#"><i class="fa fa-heart-o"></i><span>Wishlist</span></a> 
+                                                     
+                        </div>                       
+
+                    </div>
+
+                    <div class="close-header-layer"></div>
+                   <div class="navigation" nav yc-navbar-affix>
+                         <div class="navigation-header responsive-menu-toggle-class">
+                            <div class="title">Navigation</div>
+                            <div class="close-menu"></div>
+                        </div>
+                        <div class="nav-overflow">
+                            <div class="sidebar-navigation-title">Products</div>
+                            <div class="navigation-search-content">
+                               
+                                
+                                   
+                               
+                                
+                                <div class="search-box size-1"> 
+                                    <form>
+                                        <div class="search-button">
+                                            <i class="fa fa-search"></i>
+                                            <input type="submit" />
+                                        </div>
+                               
+                                       
+                                        <div class="search-field ">
+                                         
+                                            <input class="search-field" type="text" placeholder="                            Search Products and Brands" ng-model="hello" ng-keyup='fetchProducts()'/><span></span><br>
+     <ul class="list-group">
+<a href="javascript:void(0)"><li class="list-group-item"  ng-click='Viewproduct(result.product_id)' ng-repeat="result in prdNameList">{{ result.product_name }}</li> </a>
+  </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                                         
+                            
+                            
+                            
+                                
+                                <ul ng-show="lions">
+                                    <li class="full-width">
+                                        <a href="index.html" ng-click="collapseMenu()" class="active">Home</a>
+                                       
+                                    </li>
+                                    <li class="full-width-columns">
+                                        <a href="#">About us</a>
+                                       </li>
+                                    <li class="simple-list">
+                                        <a href="#">Products</a><i class="fa fa-chevron-down"></i>
+                                        <div class="submenu">
+                                            <ul class="simple-menu-list-column">
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 1</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 2</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 3</a></li>
+                                                <li><a href="#"><i class="fa fa-angle-right"></i>Product 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>                                 
+                                            
+                                    
+                                     <li class="simple-list">
+                                        <a href="#">Contact Us</a>
+                                        
+                                    </li>
+                                   
+
+                                    <li class="fixed-header-visible">
+                                        <a class="fixed-header-square-button open-cart-popup"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="fixed-header-square-button open-search-popup"><i class="fa fa-search"></i></a>
+                                    </li>
+                                </ul>
+                                    
+                      
+                               
+
+                                <div class="clear"></div>
+
+                                <a class="fixed-header-visible additional-header-logo"><img src="app-content/img/new/evr_logo.png" /></a>
+                            
+                            <div class="navigation-footer responsive-menu-toggle-class">
+                                <div class="socials-box">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="navigation-copyright">Copyrights@2017. All rights reserved</div>
+                            </div>
+                        
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </header>
+                <div class="clear"></div>
+            </div>
+    </div>
+
+            <div class="content-push" style="margin-top:25%; margin-left: 3%;">
+     <div class="breadcrumb-box">
+                    <a ui-sref="home">Home</a>
+                    <a href="">Categories</a>
+                    <a href="">Products</a>
+                                         
+                </div>
+    <div class="information-blocks">
+                    <div class="row">
+                        <div class="col-sm-5 col-md-4 col-lg-5 information-entry">
+                            <div class="product-preview-box">
+                                <div class="swiper-container product-preview-swiper" data-autoplay="0" data-loop="1" data-speed="500" data-center="0" data-slides-per-view="1">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product-zoom-image">
+                                                <img src="admin/{{products.product_img}}" alt="" data-zoom="img/product-main-1-zoom.jpg" />
+                                            </div>
+                                        </div>                                                                         
+                                       
+                                    </div>
+                                    <div class="pagination"></div>
+                                    <div class="product-zoom-container">
+                                        <div class="move-box">
+                                            <img class="default-image" src="app-content/img/product-main-1.jpg" alt="" />
+                                            <img class="zoomed-image" src="app-content/img/product-main-1-zoom.jpg" alt="" />
+                                        </div>
+                                        <div class="zoom-area"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-hidden-edges">
+                                    <div class="swiper-container product-thumbnails-swiper" data-autoplay="0" data-loop="0" data-speed="500" data-center="0" data-slides-per-view="responsive" data-xs-slides="3" data-int-slides="3" data-sm-slides="3" data-md-slides="4" data-lg-slides="4" data-add-slides="4">
+                                       
+                                        <div class="pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-4 information-entry">
+                            <div class="product-detail-box">
+                                <h1 class="product-title">{{products.product_name}}</h1>
+                                
+                                <div class="rating-box">
+                                    <div class="star"><i class="fa fa-star"></i></div>
+                                    <div class="star"><i class="fa fa-star"></i></div>
+                                    <div class="star"><i class="fa fa-star"></i></div>
+                                    <div class="star"><i class="fa fa-star-o"></i></div>
+                                    <div class="star"><i class="fa fa-star-o"></i></div>
+                                    
+                                </div>
+                                <div class="product-description detail-info-entry"> {{products.product_dec}}</div>
+                                <div class="price detail-info-entry">
+                                    
+                                    <div class="current">&#2352;  {{products.product_price}}</div>
+                                </div>
+                              
+                               
+                                
+                                <div class="detail-info-entry">
+                                    <a class="button style-10" ng-click='items.push(products.product_id)'>Add to cart</a>
+                                    <div class="clear"></div>
+                                    <a class="button style-10" style="    border: 2px #ce5207 solid;
+    background: #ce5207;" ng-click="goCart(products.product_id)">Buy now</a>
+                                    <div class="clear"></div>
+                                </div>
+                                
+                                <div class="tags-selector detail-info-entry">
+                                    <div class="detail-info-entry-title">Tags:</div>
+                                    <a href="#">bootstrap</a>/
+                                    <a href="#">collections</a>/
+                                    <a href="#">color/</a>
+                                    <a href="#">responsive</a>
+                                </div>
+                                <div class="share-box detail-info-entry">
+                                    <div class="title">Share in social media</div>
+                                    <div class="socials-box">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-youtube"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear visible-xs visible-sm"></div>
+                        <div class="col-md-4 col-lg-3 information-entry product-sidebar">
+                            <div class="row">
+                                
+                                <div class="col-md-12">
+                                    <div class="information-blocks">
+                                        <div class="information-entry products-list">
+                                            <h3 class="block-title inline-product-column-title">Featured products</h3>
+                                            <div class="inline-product-entry" ng-repeat="pro1 in products1">
+                                                <a href="" class="image" ng-click="Viewproduct(pro1.product_id)"><img alt="" src="admin/{{pro1.product_img}}"></a>
+                                               
+                                                <div class="content">
+                                                    <div class="cell-view">
+                                                        <a class="title" href="" ng-click="Viewproduct(pro1.product_id)">{{pro1.product_name}}</a>
+                                                         
+                                                        <div class="price">
+                                                            
+                                                            <div class="current">&#2352; {{pro1.product_price}}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                          
+
+                                                                                   </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+     
+    
+   <!-- Tab Content Page Starts -->
+      <div class="information-blocks">
+                            <div class="tabs-container">
+                                
+<uib-tabset active="activeJustified" justified="true">
+    <uib-tab index="0" heading="Featured Products">
+     <div class="tabs-entry" >
+      <div class="products-swiper"  >
+    <div class="swiper-container"  data-autoplay="0" data-loop="0" data-speed="500" data-center="0" data-slides-per-view="responsive" data-xs-slides="2" data-int-slides="2" data-sm-slides="3" data-md-slides="4" data-lg-slides="4" data-add-slides="4">
+                                                <div class="swiper-wrapper" >
+                                                    <div class="swiper-slide" ng-repeat="pro1 in products1"> 
+                                                        <div class="paddings-container" >
+                                                            <div class="product-slide-entry" style="width: 175px; margin-top: 10%;">
+                                                                <div class="product-image">
+                                                                    <a href="" ng-click="Viewproduct(pro1.product_id)"><img src="admin/{{pro1.product_img}}" alt="" /></a>
+                                                                    <a class="top-line-a left"><i class="fa fa-retweet"></i></a>
+                                                                    <a class="top-line-a right"><i class="fa fa-heart"></i></a>
+                                                                    <div class="bottom-line">
+                                                                        <a class="bottom-line-a" ng-click='items.push(products.product_id)'><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <a class="title" href="" ng-click="Viewproduct(pro1.product_id)">{{pro1.product_name}}</a>
+                                                                <div class="rating-box">
+                                                                    
+                                                                </div>
+                                                                <div class="price">
+                                                                    
+                                                                    <div class="current">&#2352; {{pro1.product_price}}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                   
+                                                    
+                                                </div>
+                                                <div class="pagination"></div>
+                                            </div>
+                                        </div>
+        </div>
+      
+      
+      
+      
+    </uib-tab>
+    <uib-tab index="1" heading="Popular Products">
+     <div class="tabs-entry" >
+      <div class="products-swiper"  >
+    <div class="swiper-container"  data-autoplay="0" data-loop="0" data-speed="500" data-center="0" data-slides-per-view="responsive" data-xs-slides="2" data-int-slides="2" data-sm-slides="3" data-md-slides="4" data-lg-slides="4" data-add-slides="4">
+                                                <div class="swiper-wrapper" >
+                                                    <div class="swiper-slide" ng-repeat="pop in popular1"> 
+                                                        <div class="paddings-container" >
+                                                            <div class="product-slide-entry" style="width: 175px; margin-top: 10%;">
+                                                                <div class="product-image">
+                                                                    <a href="" ng-click="Viewproduct(pop.product_id)"><img src="admin/{{pop.product_img}}" alt="" /></a>
+                                                                    <a class="top-line-a left"><i class="fa fa-retweet"></i></a>
+                                                                    <a class="top-line-a right"><i class="fa fa-heart"></i></a>
+                                                                    <div class="bottom-line">
+                                                                        <a class="bottom-line-a" ng-click='items.push(products.product_id)'><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <a class="title" href="" ng-click="Viewproduct(pop.product_id)" >{{pop.product_name}}</a>
+                                                                <div class="rating-box">
+                                                                    
+                                                                </div>
+                                                                <div class="price">
+                                                                    
+                                                                    <div class="current">&#2352; {{pop.product_price}}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                   
+                                                    
+                                                </div>
+                                                <div class="pagination"></div>
+                                            </div>
+                                        </div>
+        </div>
+    </uib-tab>
+    <uib-tab index="2" heading="New Arrivals">
+      
+    <div class="tabs-entry" >
+      <div class="products-swiper"  >
+    <div class="swiper-container"  data-autoplay="0" data-loop="0" data-speed="500" data-center="0" data-slides-per-view="responsive" data-xs-slides="2" data-int-slides="2" data-sm-slides="3" data-md-slides="4" data-lg-slides="4" data-add-slides="4">
+                                                <div class="swiper-wrapper" >
+                                                    <div class="swiper-slide" ng-repeat="newar in newarr1"> 
+                                                        <div class="paddings-container" >
+                                                            <div class="product-slide-entry" style="width: 175px; margin-top: 10%;">
+                                                                <div class="product-image">
+                                                                    <a href="" ng-click="Viewproduct(newar.product_id)"><img src="admin/{{newar.product_img}}" alt="" /></a>
+                                                                    <a class="top-line-a left"><i class="fa fa-retweet"></i></a>
+                                                                    <a class="top-line-a right"><i class="fa fa-heart"></i></a>
+                                                                    <div class="bottom-line">
+                                                                        <a class="bottom-line-a" ng-click='items.push(products.product_id)'><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <a class="title" href="" ng-click="Viewproduct(newar.product_id)">{{newar.product_name}}</a>
+                                                                <div class="rating-box">
+                                                                    
+                                                                </div>
+                                                                <div class="price">
+                                                                    
+                                                                    <div class="current">&#2352; {{newar.product_price}}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                   
+                                                    
+                                                </div>
+                                                <div class="pagination"></div>
+                                            </div>
+                                        </div>
+        </div>
+       
+    </uib-tab>
+  
+    
+                                </uib-tabset>
+          </div>
+    </div>
+    
+    
+    
+    
+   
+
+
+<!-- Tab Content Page End-->
+     </div>
+            <div class="clearfix"></div>
+            
+                
+                    
+                <a href="#" class="scrollup yellow"></a>
+
+                <!-- FOOTER -->
+                <div class="footer-wrapper style-2" style="
+    background-color: #189a8e;">
+                    <footer class="type-1">
+                       
+                        <div class="footer-bottom-navigation">
+                            <div class="cell-view">
+                                <div class="footer-links">
+                                    <a href="#">Site Map</a>
+                                    <a ui-sref="about">About</a>
+                                    <a href="#">Terms</a>
+                                    <a href="#">Advanced Search</a>
+                                    <a href="#">Orders and Returns</a>
+                                    <a ui-sref="contact">Contact Us</a>
+                                </div>
+                                <div class="copyright">Copyrights@2017. All right reserved</div>
+                            </div>
+                           
+                        </div>
+                       
+                    </footer>
+                </div>
+            
+
+        
+        <div class="clear"></div>
+            </div>
+
+    
+
+
+
+   
+ 
